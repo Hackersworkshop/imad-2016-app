@@ -4,9 +4,9 @@ var path = require('path');
 app.use(morgan('combined'));
 
 var app = express();
-var cont1={
-   title: 'Article One|HackersWorkhop';
-   heading: 'Article One';
+var artcl1 = {
+   title: 'Article One|HackersWorkhop',
+   heading: 'Article One',
    content:`
 	 <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
 	 </p>
@@ -15,10 +15,10 @@ var cont1={
 	 <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
 	 </p>`
  };
-function crtTemp(data){
+function createTemplate (data) {
   var title= data.title;
   var heading= data.heading;
-  var content= var.content;
+  var content= data.content;
   var htmltemp=`
   <html>
     <head>
