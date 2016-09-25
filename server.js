@@ -39,7 +39,7 @@ var articles = {
 
 
   },
-  'article4.html':{
+  'article4':{
    title: 'Article Four | HackersWorkhop',
    heading: 'Article Four',
    content:`
@@ -81,7 +81,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:article', function (req, res) {
+app.get('/:artclnm', function (req, res) {
   var artclnm=req.params.artclnm;
   res.send(crtTmp (articles[artclnm]));
 });
