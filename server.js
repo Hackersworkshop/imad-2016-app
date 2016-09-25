@@ -86,15 +86,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article1.html', function (req, res) {
-  res.send(crtTmp(artcl1));
+  res.send(crtTmp(Articles[artcl1]));
 });
 
 app.get('/article2.html', function (req, res) {
-    res.send(crtTmp(artcl2));
+    res.send(crtTmp(Articles[artcl1]));
 });
 
 app.get('/article3.html', function (req, res) {
-    res.send(crtTmp(artcl3));
+    res.sendFile(crtTmp(Articles[artcl1]));
 });
 
 app.get('/ui/style.css', function (req, res) {
