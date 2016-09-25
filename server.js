@@ -9,8 +9,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article1.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+app.get('/:artclnm', function (req, res) {
+  var artclnm==req.param.artclnm;
+  res.sendFile(path.join(__dirname, 'ui', (articles[artclnm])));
 });
 
 app.get('/article2.html', function (req, res) {
