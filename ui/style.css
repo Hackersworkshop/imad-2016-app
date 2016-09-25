@@ -20,3 +20,11 @@ body {
     height: 200px;
 }
 
+.c1{
+	        max-width: 800px;
+		padding-right: 1px;
+		padding-left: 2px;
+		margin: 0 auto;
+		color: dark grey;
+		font-family: sans-serif;
+}
