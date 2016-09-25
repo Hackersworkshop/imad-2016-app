@@ -15,11 +15,11 @@ var artcl1 = {
 	 <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
 	 </p>`
  };
-function createTemplate (data) {
+function crtTmp (data) {
   var title= data.title;
   var heading= data.heading;
   var content= data.content;
-  var htmltemp=`
+  var htmltmp=`
   <html>
     <head>
       <title>
@@ -42,14 +42,14 @@ function createTemplate (data) {
     </body>
   </html>
   `;
-  return htmltemp;
+  return htmltmp;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article1.html', function (req, res) {
-  res.sendFile(crtTemp(article1));
+  res.sendFile(crtTmp(artcl1));
 });
 
 app.get('/article2.html', function (req, res) {
