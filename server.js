@@ -5,20 +5,19 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var Articles= {
- artcl1 : {
-   title: 'Article One|HackersWorkhop',
-   heading: 'Article One',
-   content:`
-	 <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
-	 </p>
-	 <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
-	 </p>
-	 <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
-	 </p>`
-  },
-  artcl2 : {
+var articles = {
+   article1 : {
+     title: 'Article One|HackersWorkhop',
+     heading: 'Article One',
+     content:`
+     <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
+     </p>
+     <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
+     </p>
+     <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
+     </p>`
+   },
+   article2 : {
    title: 'Article Two | HackersWorkhop',
    heading: 'Article Two',
    content:`
@@ -30,7 +29,7 @@ var Articles= {
 	 </p>`
 
   },
-  artcl3 : {
+  article3 : {
 
    title: 'Article Three | HackersWorkhop',
    heading: 'Article Three',
@@ -41,14 +40,11 @@ var Articles= {
 
   },
   article4:{
-   title: 'Article our | HackersWorkhop',
+   title: 'Article Four | HackersWorkhop',
    heading: 'Article Four',
    content:`
-	 <p>		This article empty.
+	 <p>		This article is empty.
 	 </p>`
-
-
-
   }
  };
 function crtTmp (data) {
@@ -85,17 +81,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article1.html', function (req, res) {
-  res.send(crtTmp(Articles[artcl1]));
+app.get('/:article', function (req, res) {
+  var artclnm=req.params.artclnm;
+  res.send(crtTmp (articles[artclnm]));
 });
 
-app.get('/article2.html', function (req, res) {
-    res.send(crtTmp(Articles[artcl1]));
-});
-
-app.get('/article3.html', function (req, res) {
-    res.sendFile(crtTmp(Articles[artcl1]));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
