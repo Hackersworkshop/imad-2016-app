@@ -1,10 +1,13 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-app.use(morgan('combined'));
 
 var app = express();
-var artcl1 = {
+app.use(morgan('combined'));
+
+
+var Articles= {
+ artcl1 : {
    title: 'Article One|HackersWorkhop',
    heading: 'Article One',
    content:`
@@ -14,6 +17,39 @@ var artcl1 = {
 	 </p>
 	 <p>		This is the content of article one.This is the content of article one.This is the content of article one.This is the content of article one.
 	 </p>`
+  },
+  artcl2 : {
+   title: 'Article Two | HackersWorkhop',
+   heading: 'Article Two',
+   content:`
+	 <p>		This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.
+	 </p>
+	 <p>		This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.
+	 </p>
+	 <p>		This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.	This is the content of article two.
+	 </p>`
+
+  },
+  artcl3 : {
+
+   title: 'Article Three | HackersWorkhop',
+   heading: 'Article Three',
+   content:`
+	 <p>		In xanadu did Kubla Khan,<br/><br/>a stately plessure , dom decree<br/><br/>were alphs the heavenly river flow<br/><br/>through caverns measure less to man
+	 </p>`
+
+
+  },
+  article4:{
+   title: 'Article our | HackersWorkhop',
+   heading: 'Article Four',
+   content:`
+	 <p>		This article empty.
+	 </p>`
+
+
+
+  }
  };
 function crtTmp (data) {
   var title= data.title;
@@ -44,20 +80,21 @@ function crtTmp (data) {
   `;
   return htmltmp;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article1.html', function (req, res) {
-  res.sendFile(crtTmp(artcl1));
+  res.send(crtTmp(artcl1));
 });
 
 app.get('/article2.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article2.html'));
+    res.send(crtTmp(artcl2));
 });
 
 app.get('/article3.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article3.html'));
+    res.send(crtTmp(artcl3));
 });
 
 app.get('/ui/style.css', function (req, res) {
