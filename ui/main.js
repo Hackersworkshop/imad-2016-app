@@ -8,11 +8,11 @@ img.onclick=function(){
  var interval = setInterval(movRght,10);
   };
   
-  
+var count=0;
 var button=document.getElementById('counter');
-button.onclick.function(){
+button.onclick =function(){
     var request=new XMLHttoRequest();
     count=count+1;
-    var span=document.getElementbyId('counter')
+    var span=document.getElementbyId('count')
     span.InnerHTMl=count.toString();
 }
