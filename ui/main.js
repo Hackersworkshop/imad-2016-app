@@ -1,5 +1,5 @@
-var button=document.getElementById('counter');
-button.Onclick = function() {
+var a=document.getElementById('counter');
+a.onclick = function() {
     var request=new XMLHttpRequest();
     request.onreadystatechange = function(){
         if(request.readystate == XMLHttpRequest.Done){
