@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 var count=0;
 app.get('/count', function (req, res) {
   count= count+1;
-  res.send(counter.toString());
+  res.send(count.toString());
 });
 
 app.get('/:artclnm', function (req, res) {
