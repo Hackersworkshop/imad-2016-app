@@ -6,10 +6,6 @@ var app = express();
 app.use(morgan('combined'));
 
 
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
 var articles = {
    'article1.html' : {
      title: 'Article One|HackersWorkhop',
@@ -89,6 +85,10 @@ app.get('/', function (req, res) {
 app.get('/:artclnm', function (req, res) {
   var artclnm=req.params.artclnm;
   res.send(crtTmp (articles[artclnm]));
+});
+
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
 app.get('/ui/style.css', function (req, res) {
