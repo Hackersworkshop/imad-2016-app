@@ -81,6 +81,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
 app.get('/:artclnm', function (req, res) {
   var artclnm=req.params.artclnm;
   res.send(crtTmp (articles[artclnm]));
