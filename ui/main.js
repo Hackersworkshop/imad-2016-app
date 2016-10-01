@@ -11,11 +11,11 @@ img.onclick=function(){
   
 var button=document.getElementById('counter');
 
-button.onclick=function(){
+button.onclick = function() {
     var request=new XMLHttpRequest();
     httpRequest.onreadystatechange = function(){
-        if(request.readystate === XMLHttpRequest.Done){
-         if(request.status === 200){
+        if(request.readystate == XMLHttpRequest.Done){
+         if(request.status == 200){
              var counter = request.responseText;
          }
         }
