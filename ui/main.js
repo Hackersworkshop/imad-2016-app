@@ -1,1 +1,1 @@
-console.log('Loaded!');
+var button=document.getElementbiID('counter');
