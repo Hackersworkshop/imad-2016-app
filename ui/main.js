@@ -17,7 +17,7 @@ button.onclick=function(){
     {
        request.readystate == XMLHttpRequest.Done;
     }
-    count=count+1;
+    counter=counter+1;
     var span=document.getElementById('counter');
     span.InnerHTMl=counter.toString();
 };
