@@ -82,6 +82,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var count=0;
+app.get('/count', function (req, res) {
+  count= count+1;
+  res.send(counter.toString());
+});
+
 app.get('/:artclnm', function (req, res) {
   var artclnm=req.params.artclnm;
   res.send(crtTmp (articles[artclnm]));
@@ -89,12 +95,6 @@ app.get('/:artclnm', function (req, res) {
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
-var count=0;
-app.get('/count', function (req, res) {
-  count= count+1;
-  res.send(counter.toString());
 });
 
 app.get('/ui/style.css', function (req, res) {
