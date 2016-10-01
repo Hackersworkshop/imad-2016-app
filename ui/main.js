@@ -1,4 +1,4 @@
-var img=document.GetElementbyID('logo');
+var img=document.getElementbyId('logo');
 img.onclick=function(){
   img.style.marginLeft= '100px';  
 };
