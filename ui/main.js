@@ -2,7 +2,7 @@ var button=document.getElementById('counter');
 var img=document.getElementById('logo');
 
 
-img.Onclick = function() {
+button.Onclick = function() {
     var request=new XMLHttpRequest();
     request.onreadystatechange = function(){
         if(request.readystate == XMLHttpRequest.Done){
