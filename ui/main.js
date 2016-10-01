@@ -13,9 +13,9 @@ button.onclick = function() {
          }
         }
     };
-    request.open('GET','http://hackersworkshop.imad.hasura-app.io/counter',true);
+    request.open('GET','http://hackersworkshop.imad.hasura-app.io/counter', true);
     resquest.send(null);
 };
 
 
-}
+};
