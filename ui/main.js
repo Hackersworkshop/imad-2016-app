@@ -1,4 +1,4 @@
-
+window.onload = function() {
 
 var button= document.getElementById('counter');
 button.onclick = function() {
@@ -17,3 +17,4 @@ button.onclick = function() {
     request.send(null);
 };
 
+};
