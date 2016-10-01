@@ -8,3 +8,6 @@ img.onclick=function(){
  var interval = setInterval(movRght,10);
   };
 var button=document.getElementById('counter');
+button.onclick = function(){
+    var span=document.getElementbyId('counter')
+}
