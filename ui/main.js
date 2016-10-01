@@ -1,4 +1,6 @@
 var button=document.getElementById('counter');
+var img=document.getElementById('logo');
+
 
 button.Onclick = function() {
     var request=new XMLHttpRequest();
@@ -12,3 +14,14 @@ button.Onclick = function() {
     request.open('GET','http://hackersworkshop.imad.hasura-app.io/counter',true);
     resquest.send(null);
 };
+
+var marginLeft=0;
+function movRght(){
+    marginLeft=marginLeft+2;
+    img.style.marginLeft= marginLeft + 'px';
+}
+img.onclick=function(){
+ var interval = setInterval(movRght,10);
+  };
+  
+  
