@@ -1,7 +1,4 @@
 var button=document.getElementById('counter');
-var img=document.getElementById('logo');
-
-
 button.Onclick = function() {
     var request=new XMLHttpRequest();
     request.onreadystatechange = function(){
@@ -14,6 +11,8 @@ button.Onclick = function() {
     request.open('GET','http://hackersworkshop.imad.hasura-app.io/counter',true);
     resquest.send(null);
 };
+
+var img=document.getElementById('logo');
 
 var marginLeft=0;
 function movRght(){
