@@ -13,7 +13,6 @@ button.Onclick = function() {
 };
 
 var img=document.getElementById('logo');
-
 var marginLeft=0;
 function movRght(){
     marginLeft=marginLeft+2;
