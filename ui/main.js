@@ -10,4 +10,5 @@ img.onclick=function(){
 var button=document.getElementById('counter');
 button.onclick = function(){
     var span=document.getElementbyId('counter')
+    span.InnerHTMl=count.toString();
 }
