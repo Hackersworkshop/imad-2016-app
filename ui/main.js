@@ -7,7 +7,9 @@ function movRght(){
 img.onclick=function(){
  var interval = setInterval(movRght,10);
   };
-var count=0;
+  
+  
+var counter=0;
 var button=document.getElementById('count');
 button.onclick=function(){
     var request=new XMLHttpRequest();
