@@ -1,5 +1,7 @@
 var img=document.getElementById('logo');
+var marginLeft=0;
 function movRght(){
+    marginLeft=marginLeft+10;
     img.style.marginLeft= '100px';
 }
 img.onclick=function(){
