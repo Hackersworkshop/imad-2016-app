@@ -9,7 +9,7 @@ img.onclick=function(){
   };
   
 var count=0;
-var button=document.getElementById('counter');
+var button=document.getElementById('count');
 button.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange= function()
@@ -17,6 +17,6 @@ button.onclick=function(){
        request.readystate == XMLHttpRequest.Done;
     }
     count=count+1;
-    var span=document.getElementbyId('count');
-    span.InnerHTMl=count.toString();
+    var span=document.getElementById('counter');
+    span.InnerHTMl=counter.toString();
 };
