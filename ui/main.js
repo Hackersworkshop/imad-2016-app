@@ -1,4 +1,6 @@
 window.onload = function() {
+
+
 var button = document.getElementById('counter');
 
 button.onclick = function () {
@@ -15,8 +17,8 @@ button.onclick = function () {
     };
     
     request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/counter', true);
-    request.send(null);
-    
+    request.send(null); 
+};
     
 var nameIP=document.GetElementById("name");
 var name=nameIP.value;
@@ -32,7 +34,8 @@ submit.Onclick function(){
                names=JSON.parse('names');
               var list='';      
               for(var i="0";i=names.length; i++)    {
-             list+='<li>' + names[i]+'</li>'};
+             list+='<li>' + names[i]+'</li>';
+              }
           }
       }  
     };
@@ -40,4 +43,5 @@ submit.Onclick function(){
     request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/submit-n?', true);
     request.send(null);
 };
-};
+ 
+}
