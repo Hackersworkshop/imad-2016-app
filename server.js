@@ -88,6 +88,11 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
+var names=[];
+app.get('/submit-n', function(req, res){
+var name=req.query.name;
+});
+
 app.get('/:artclnm', function (req, res) {
   var artclnm=req.params.artclnm;
   res.send(crtTmp (articles[artclnm]));
