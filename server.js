@@ -89,7 +89,7 @@ app.get('/counter', function (req, res) {
 });
 
 var names=[];
-app.get('/submit-n', function(req, res){
+app.get('/:submit-n', function(req, res){
 var names=req.query.name;
 });
 
