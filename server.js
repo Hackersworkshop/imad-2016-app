@@ -91,6 +91,8 @@ app.get('/counter', function (req, res) {
 var names=[];
 app.get('/submit-n', function(req, res){
 var names=req.query.name;
+ names.push(name);
+res.send(JSON.stringify(names));
 });
 
 app.get('/:artclnm', function (req, res) {
