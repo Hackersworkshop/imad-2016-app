@@ -20,8 +20,11 @@ button.onclick = function () {
     request.send(null); 
 };
     
-var submit=document.getElementById("submit");
-submit.Onclick= functio(){
+    
+    
+    
+var submit=document.getElementById("sbmt");
+sbmt.Onclick= function(){
 
     var request = new XMLHttpRequest();
     
@@ -31,7 +34,7 @@ submit.Onclick= functio(){
               var names= request.responseText;
                names=JSON.parse('names');
               var list='';      
-              for(var i="0";i<names.length; i++)    {
+              for(var i="0";i < names.length; i++)    {
              list=='<li>' + names[i]+'</li>'
              }
             var ul=getElementById('namelst');
