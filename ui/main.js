@@ -35,11 +35,10 @@ sbmt.Onclick= function(){
                names=JSON.parse('names');
               var list='';      
               for(var i="0";i < names.length; i++)    {
-             list=='<li>' + names[i]+'</li>';
-             }
+             list=='<li>' + names[i]+'</li>'; }
             var ul=getElementById('namelst');
             ul.innerHTML=list;
-          }
+           }
       }  
     };
     
@@ -48,6 +47,9 @@ sbmt.Onclick= function(){
     
     request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/submit-n?name=', true);
     request.send(null);
-};
+
 
 };
+
+
+}
