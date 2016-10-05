@@ -90,7 +90,7 @@ app.get('/counter', function (req, res) {
 
 var names=[];
 app.get('/submit-n', function(req, res){
-var name=req.query.name;
+var names=req.query.name;
 });
 
 app.get('/:artclnm', function (req, res) {
