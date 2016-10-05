@@ -1,3 +1,6 @@
+window.onload = function() {
+
+
 
 
 var button = document.getElementById('counter');
@@ -50,3 +53,4 @@ sbmt.Onclick= function(){
 
 };
 
+}
