@@ -19,11 +19,9 @@ button.onclick = function () {
     request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/counter', true);
     request.send(null); 
 };
-
-
     
 var submit=document.getElementById("submit");
-submit.onclick= function(){
+submit.Onclick= functio(){
 
     var request = new XMLHttpRequest();
     
@@ -34,7 +32,10 @@ submit.onclick= function(){
                names=JSON.parse('names');
               var list='';      
               for(var i="0";i<names.length; i++)    {
-             list=='<li>' + names[i]+'</li>'}
+             list=='<li>' + names[i]+'</li>'
+             }
+            var ul=getElementById('namelst');
+            ul.innerHTML=list;
           }
       }  
     };
@@ -46,4 +47,4 @@ submit.onclick= function(){
     request.send(null);
 }
 
-}
+};
