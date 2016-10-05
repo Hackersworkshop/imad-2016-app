@@ -20,8 +20,6 @@ button.onclick = function () {
     request.send(null); 
 };
     
-var nameIP=document.GetElementById("name");
-var name=nameIP.value;
 var submit=document.getElementById("submit");
 submit.Onclick function(){
 
@@ -33,15 +31,18 @@ submit.Onclick function(){
               var names= request.responseText;
                names=JSON.parse('names');
               var list='';      
-              for(var i="0";i=names.length; i++)    {
-             list+='<li>' + names[i]+'</li>';
-              }
+              for(var i="0";i<names.length; i++)    {
+             list=='<li>' + names[i]+'</li>'};
           }
       }  
     };
     
-    request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/submit-n?', true);
+    var nameIP=document.GetElementById("name");
+    var name=nameIP.value;
+    
+    request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/submit-n?name=', true);
     request.send(null);
 };
- 
+};
+
 }
