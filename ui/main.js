@@ -22,7 +22,7 @@ submit.onclick= function(){
     var nameIP=document.getElementById("name");
     var name=nameIP.value;
     
-    request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/submit-n?name=', true);
+    request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/submit-n?name=' +name, true);
     request.send(null);
 
 
