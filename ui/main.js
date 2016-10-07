@@ -44,7 +44,7 @@ submit.Onclick= function(){
       }  
     };
     
-    var nameIP=document.GetElementById("name");
+    var nameIP=document.getElementById("name");
     var name=nameIP.value;
     
     request.open('GET', 'http://hackersworkshop.imad.hasura-app.io/submit-n?name=', true);
