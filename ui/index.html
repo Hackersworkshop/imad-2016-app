@@ -1,30 +1,65 @@
 <!doctype html>
 <html>
+  
+  
     <head>
-        <link href="/ui/style.css" rel="stylesheet" />
+    	<title>   HckersWorkshop</title>
+    	
+    	<!-- CSS  -->
+        <link href="style.css" rel="stylesheet" />
         <link rel='shortcut icon' href='http://icons.veryicon.com/ico/System/Multipurpose%20Alphabet/Letter%20H%20black.ico' type='image/x-icon'/>
-    </head>
+        <link href="https://fonts.googleapis.com/css?family=Anton|Lobster|Roboto+Slab" rel="stylesheet"> 
+	</head>
+	
     <body>
-        <div class="center">
-            <img id="logo" src="http://wapkaimage.com/100045/100045601_8e36c70ca0.png" class="img-medium"/>
+        <nav class="light-blue lighten-1" role="navigation">
+		  <div class="nav-wrapper container"><a id="logo-container" href="/index.html" class="brand-logofont-effect-outline " style="font-family: 'anton', serif;">HACKERSWORKSHOP</a>
+        <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/tech.html">Technology</a></li>
+        <li><a href="/mobile.html">Mobile</a></li>
+        <li><a href="/internet.html">Internet</a></li>
+        <li><a href="/others.html">Other Services</a></li>
+        <li><a href="/about.htm">About us</a></li>
+        </ul>
+        
+		  <ul id="nav-mobile" class="side-nav " >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/tech.html">Technology</a></li>
+        <li><a href="/mobile.html">Mobile</a></li>
+        <li><a href="/internet.html">Internet</a></li>
+        <li><a href="/others.html">Other Services</a></li>
+        <li><a href="/about.htm">About us</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-        <hr/>
-        <script src='/ui/main.js'></script>
-        <div class="center text-big bold">
-            <h1>Profile</h1>
-        </div>
-	<div class="c1">
- 	 <p>Name: Nafih<br/>Profession: Student</p>  
- 	 <hr/>
-	</div>
-        <br/>
+        </nav>
+        <br/><hr/>
         <button id="counter">Buttton</button><br/>
         Clicked = <span id="count"> 0 </span>Times
         
         <hr/>
-<input type="text" id="name" placeholder="Name"></input>
-<input type="submit" id="sbmt" value="Ok"></input>
-<ul id="namelst">         </ul>
+       	<input type="text" id="name" placeholder="Name"> </input>
+		<input type="submit" id="sbmt" value="Ok"></input>
+		<ul id="namelst">         </ul>
 
+
+		<footer class="page-footer orange">
+		<div class="container">
+		<h5 class="white-text">Company Bio</h5>
+		<p class="grey-text text-lighten-4">HackersWorkshop has pioneered a number of revolutionary technologies, including the iPhone, the light bulb, beer pong, and a vaccine for a disease that has not yet been discovered. </p>
+		</div>
+		<div class="footer-copyright">
+		<div class="container">
+		copy rights reserved <p class="orange-text text-lighten-3" > HackersWorkshop</p>
+		</div>
+		</div>
+		</footer>
+		
+		<!--  Scripts-->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <script src='/main.js'></script>
+	    <script src='/init.js'></script>
+	    <script src='/materialize.js'></script>
     </body>
 </html>
